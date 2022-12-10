@@ -1,4 +1,3 @@
-using Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -19,6 +18,9 @@ using Authentication.Entities;
 using Authentication.DataAccess.Context;
 using Entities.Exceptions;
 using DataAccess.Context;
+using DataAccess.Interfaces;
+using DataAccess.Repositories;
+using Services.Interfaces;
 
 namespace EcommerceRV
 {
@@ -57,7 +59,7 @@ namespace EcommerceRV
 
             services.AddDbContext<EcommerceContext>(options =>
             {
-                options.UseSqlServer(Configuration.GetConnectionString("EcommerceDatabase"), b => b.MigrationsAssembly("EcommerceSystem"));
+                options.UseSqlServer(Configuration.GetConnectionString("EcommerceDatabase"), b => b.MigrationsAssembly("EcommerceRV"));
             });
 
             services.AddIdentity<IdentityUser, IdentityRole>(options => {
@@ -144,6 +146,10 @@ namespace EcommerceRV
         {
             //Context
             services.AddTransient<IdentityDbContext, EcommerceContext>();
+
+            //Order
+            services.AddTransient<IOrderRepository, OrderRepository>();
+            services.AddTransient<IOrderService, OrderService>();
 
         }
     }

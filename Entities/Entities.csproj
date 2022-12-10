@@ -5,7 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="RequestParameters\" />
+    <Compile Remove="RequestParameters\**" />
+    <EmbeddedResource Remove="RequestParameters\**" />
+    <None Remove="RequestParameters\**" />
   </ItemGroup>
 
   <ItemGroup>
