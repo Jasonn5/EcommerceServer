@@ -1,0 +1,10 @@
+E:\Training\DEV\Frontend\EcommerceServer\Report\bin\Debug\netcoreapp3.1\Report.deps.json
+E:\Training\DEV\Frontend\EcommerceServer\Report\bin\Debug\netcoreapp3.1\Report.dll
+E:\Training\DEV\Frontend\EcommerceServer\Report\bin\Debug\netcoreapp3.1\Report.pdb
+E:\Training\DEV\Frontend\EcommerceServer\Report\obj\Debug\netcoreapp3.1\Report.csproj.AssemblyReference.cache
+E:\Training\DEV\Frontend\EcommerceServer\Report\obj\Debug\netcoreapp3.1\Report.GeneratedMSBuildEditorConfig.editorconfig
+E:\Training\DEV\Frontend\EcommerceServer\Report\obj\Debug\netcoreapp3.1\Report.AssemblyInfoInputs.cache
+E:\Training\DEV\Frontend\EcommerceServer\Report\obj\Debug\netcoreapp3.1\Report.AssemblyInfo.cs
+E:\Training\DEV\Frontend\EcommerceServer\Report\obj\Debug\netcoreapp3.1\Report.csproj.CoreCompileInputs.cache
+E:\Training\DEV\Frontend\EcommerceServer\Report\obj\Debug\netcoreapp3.1\Report.dll
+E:\Training\DEV\Frontend\EcommerceServer\Report\obj\Debug\netcoreapp3.1\Report.pdb

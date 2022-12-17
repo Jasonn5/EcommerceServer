@@ -1,4 +1,6 @@
-﻿using Entities;
+﻿using DataAccess.Model;
+using Entities;
+using System;
 using System.Collections.Generic;
 
 namespace DataAccess.Interfaces
@@ -9,5 +11,6 @@ namespace DataAccess.Interfaces
         public Order FindById(int id);
         public void Update(Order entity);
         IEnumerable<Order> list();
+        IEnumerable<OrderOrderDetails> GetOrders(DateTime startDate, DateTime endDate);
     }
 }

@@ -1,17 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32510.428
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcommerceRV", "EcommerceRV\EcommerceRV.csproj", "{E4A7C951-3A36-48A4-B1BD-CEA81312BCA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EcommerceRV", "EcommerceRV\EcommerceRV.csproj", "{E4A7C951-3A36-48A4-B1BD-CEA81312BCA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authentication", "Authentication\Authentication.csproj", "{26C5A853-5816-4932-986F-EEC438F20809}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authentication", "Authentication\Authentication.csproj", "{26C5A853-5816-4932-986F-EEC438F20809}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{1B347949-6A88-47E7-B1FB-90810D4B6568}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{1B347949-6A88-47E7-B1FB-90810D4B6568}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{E545DC80-8ABE-4159-B3E0-E8E63CC6E5AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{E545DC80-8ABE-4159-B3E0-E8E63CC6E5AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{B0EB1FD2-1197-4014-B690-90A8B082CFD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{B0EB1FD2-1197-4014-B690-90A8B082CFD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Report", "Report\Report.csproj", "{1EFFF8F9-C46F-4934-A6EE-EA87D3A56586}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{B0EB1FD2-1197-4014-B690-90A8B082CFD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0EB1FD2-1197-4014-B690-90A8B082CFD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0EB1FD2-1197-4014-B690-90A8B082CFD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EFFF8F9-C46F-4934-A6EE-EA87D3A56586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EFFF8F9-C46F-4934-A6EE-EA87D3A56586}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EFFF8F9-C46F-4934-A6EE-EA87D3A56586}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EFFF8F9-C46F-4934-A6EE-EA87D3A56586}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

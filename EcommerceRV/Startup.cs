@@ -21,6 +21,9 @@ using DataAccess.Context;
 using DataAccess.Interfaces;
 using DataAccess.Repositories;
 using Services.Interfaces;
+using Entities;
+using DataAccess.Interfaces.Custom;
+using DataAccess.Repositories.Custom;
 
 namespace EcommerceRV
 {
@@ -41,6 +44,7 @@ namespace EcommerceRV
             RegisterTypes(services);
 
             Authentication.StartupHelper.RegisterTypes(services);
+            Reports.StartupHelper.RegisterTypes(services);
 
             services.AddCors(options =>
             {
@@ -150,6 +154,22 @@ namespace EcommerceRV
             //Order
             services.AddTransient<IOrderRepository, OrderRepository>();
             services.AddTransient<IOrderService, OrderService>();
+
+            //Product
+            services.AddTransient<IProductRepository, ProductRepository>();
+            services.AddTransient<IProductService, ProductService>();
+
+            //Stock
+            services.AddTransient<IRepository<Stock>, StockRepository>();
+            services.AddTransient<IStockService, StockService>();
+
+            //Sale
+            services.AddTransient<IRepository<Sale>, SaleRepository>();
+            services.AddTransient<ISaleService, SaleService>();
+            services.AddTransient<ISaleRepository, CustomSaleRepository>();
+            
+            //Reports
+            services.AddTransient<IReportService, ReportService>();
 
         }
     }

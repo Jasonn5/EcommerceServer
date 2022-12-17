@@ -1,5 +1,6 @@
 ﻿using Authentication.Entities;
 using DataAccess.Interfaces;
+using DataAccess.Model;
 using Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -20,16 +21,6 @@ namespace DataAccess.Repositories
         }
         public Order Add(Order entity)
         {
-            if (entity.Client != null)
-            {
-                var client = dataAccess.Set<User>().Find(entity.Client.Id);
-
-                if (client != null)
-                {
-                    entity.Client = client;
-                }
-            }
-
             if (entity.OrderDetails != null)
             {
                 var orderDetails = new List<OrderDetail>();
@@ -50,7 +41,6 @@ namespace DataAccess.Repositories
         public Order FindById(int id)
         {
             return dataAccess.Set<Order>()
-                .Include(o => o.Client)
                 .Include(o => o.OrderDetails)
                 .SingleOrDefault(o => o.Id == id);
         }
@@ -64,11 +54,17 @@ namespace DataAccess.Repositories
         {
             var order = dataAccess.Set<Order>()
                 .Include(s => s.OrderDetails)
-                .Include(s => s.Client)
                 .SingleOrDefault(s => s.Id == entity.Id);
 
             order.StatusId = entity.StatusId;
             dataAccess.SaveChanges();
         }
+        public IEnumerable<OrderOrderDetails> GetOrders(DateTime startDate, DateTime endDate)
+        {
+            var orders = dataAccess.Set<OrderOrderDetails>().FromSqlRaw($"dbo.GetOrders '{startDate.ToString("MM/dd/yyyy")}', '{endDate.ToString("MM/dd/yyyy 23:59:59")}'").AsNoTracking().AsEnumerable();
+
+            return orders;
+        }
+
     }
 }

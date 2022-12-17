@@ -1,5 +1,4 @@
-﻿using Authentication.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace Entities
@@ -15,9 +14,8 @@ namespace Entities
         public DateTime OrderDate { get; set; }
 
         public DateTime? CompletedDate { get; set; }
-
-        public User Client { get; set; }
-
         public ICollection<OrderDetail> OrderDetails { get; set; }
+
+        public Sale Sale { get; set; }
     }
 }
