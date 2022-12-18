@@ -18,7 +18,13 @@ namespace DataAccess.Repositories
             this.dataAccess = dataAccess;
         }
 
-        public IQueryable<Stock> List => throw new NotImplementedException();
+        public IQueryable<Stock> List
+        {
+            get
+            {
+                return this.dataAccess.Set<Stock>().Include(s => s.Product);
+            }
+        }
 
         public Stock Add(Stock entity)
         {

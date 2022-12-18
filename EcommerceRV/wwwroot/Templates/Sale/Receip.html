@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+        @font-face {
+            font-family: Courier;
+            src: url(http://jabusoft-misc.s3-sa-east-1.amazonaws.com/fonts/cour.ttf);
+        }
+
+        body {
+            font-family: Courier;
+        }
+
+        .right-align {
+            float: right;
+        }
+
+        .row {
+            width: 100%;
+            display: inline-block;
+            margin-top: 1%;
+        }
+
+        .logo {
+            width: 40%;
+            float: left;
+            text-align: center;
+            padding-top: 2%;
+        }
+
+        .title {
+            width: 60%;
+            float: left;
+            text-align: center;
+            padding-top: 3%;
+        }
+
+        .row-signatures {
+            width: 100%;
+            display: inline-block;
+            margin-top: 15%;
+        }
+
+        .signature{
+            width: 25%;
+            float: left;
+            text-align: center;
+        }
+
+        hr.dotted {
+            width: 80%;
+            border-top: 1px dotted;
+        }
+
+        table {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="title">
+            <h2><strong>NOTA DE VENTA N° #saleCode#</strong></h2>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <span class="right-align">#saleDate#</span>
+    </div>
+    <hr />
+    <br />
+    <table width="100%">
+        <tr>
+            <th>CODIGO</th>
+            <th>DESCRIPCIÓN</th>
+            <th>CANTIDAD</th>
+            <th>PRECIO UNIT.</th>
+            <th>TOTAL</th>
+        </tr>
+        {VALUES TO POPULATE}
+    </table>
+    <hr />
+    <div class="row">
+        <span class="right-align">Total general: #totalAmount#</span>
+    </div>
+    <div class="row">
+        <span>SON: #literalAmount#</span>
+    </div>
+</body>
+</html>

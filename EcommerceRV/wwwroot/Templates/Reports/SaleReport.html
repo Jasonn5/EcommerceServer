@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+        @font-face {
+            font-family: Courier;
+            src: url(http://jabusoft-misc.s3-sa-east-1.amazonaws.com/fonts/cour.ttf);
+        }
+
+        body {
+            font-family: Courier;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        .align-center {
+            text-align: center;
+        }
+
+        .right-align {
+            float: right;
+        }
+
+        .align-right {
+            text-align: right;
+        }
+
+        .container {
+            padding: 1% 2% 2% 2%;
+            float: left;
+        }
+
+        .row {
+            width: 100%;
+            float: left;
+            margin-top: 1%;
+        }
+
+        .image {
+            text-align: center;
+            padding-top: 2%;
+        }
+
+        .column1 {
+            width: 30%;
+            float: left;
+        }
+
+        .column2 {
+            width: 40%;
+            float: left;
+            text-align: center;
+            padding-top: 3%;
+        }
+
+        .column3 {
+            width: 30%;
+            text-align: center;
+            float: left;
+        }
+
+        .column4 {
+            width: 50%;
+            float: left;
+        }
+
+        .column5 {
+            width: 50%;
+            float: left;
+            text-align: center;
+        }
+
+        .border-style {
+            border: 1px solid;
+        }
+
+        p {
+            padding-left: 1%;
+        }
+
+        table tr td:nth-child(4) {
+            text-align: right !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="column2">
+                <h2><strong>REPORTE DE VENTAS</strong></h2>
+            </div>
+            <div class="column3">
+                <p><strong>FECHA: </strong><span>#currentDate#</span></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column4">
+                <p><strong>DEL: </strong><span>#startDate#</span><strong> AL: </strong><span>#endDate#</span></p>
+            </div>
+        </div>
+        <div class="row">
+            <table>
+                <tr>
+                    <th>FECHA</th>
+                    <th>CÓDIGO</th>
+                    <th>DESCRIPCIÓN</th>
+                    <th>TOTAL VENTA</th>
+                </tr>
+                {VALUES TO POPULATE}
+            </table>
+            <div class="row">
+                <span class="right-align"><strong>Total:</strong> #Total#</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
